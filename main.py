@@ -37,7 +37,9 @@ def generate_flood_likelihood_and_probability(
 
 
 if __name__ == "__main__":
-    data_path = Path("/eodc/private/tuwgeo/users/mabdelaa/repos/vv_vh_fusion/data")
+    data_path = Path(
+        "/eodc/private/tuwgeo/users/mabdelaa/data/s1floodat/italy/2023_5/FLOOD/V1M3R1"
+    )
     uncert_images = [image for image in data_path.glob("*/*/*UNCERT*.tif")]
     print(f"Found {len(uncert_images)} uncertainty images.")
     for uncert_image in tqdm(uncert_images):
